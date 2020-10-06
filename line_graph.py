@@ -1,3 +1,8 @@
+@login_required(login_url="/ecom/login/")
+def net_profit_graph(request):
+    return render(request,"Ecom/net_profit_graph.html")
+
+@csrf_exempt
 def net_profit_graph_data(request):
     from dateutil import relativedelta
     from operator import add,sub
